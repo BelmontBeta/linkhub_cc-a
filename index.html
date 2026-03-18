@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Linkhub CC-B · CESAR School</title>
+<title>Linkhub · CESAR School</title>
 <link rel="icon" type="image/png" href="school_laranja.png" />
 <link rel="shortcut icon" type="image/png" href="school_laranja.png" />
 <link rel="manifest" href="manifest.json" />
@@ -277,6 +277,12 @@
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
+  .link-icon-text {
+    font-family: var(--font-head);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+  }
 
   .link-label { font-weight: 600; font-size: .95rem; flex: 1; }
 
@@ -481,7 +487,7 @@
 
   /* Desktop largo: links, provas e monitorias em grid */
   @media (min-width: 900px) {
-    .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .links-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
     .provas-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .monitorias-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   }
@@ -739,7 +745,7 @@
     </section>
 
     <footer>
-      <p>Feito por Thony Barreto, Vamos juntos! 🚀 · CESAR School</p>
+      <p>Feito por Thony Barreto, vamos juntos! 🚀 · CESAR School</p>
     </footer>
   </div>
 </div>
@@ -853,8 +859,12 @@ function init() {
     const right = isPdf
       ? `<span class="link-badge">PDF</span>`
       : `<svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+      const isTextIcon = l.icon.length <= 3 && !/\p{Emoji}/u.test(l.icon);
+      const iconHtml = isTextIcon
+        ? `<span class="link-icon"><span class="link-icon-text">${l.icon}</span></span>`
+        : `<span class="link-icon">${l.icon}</span>`;
     a.innerHTML = `
-      <span class="link-icon">${l.icon}</span>
+      ${iconHtml}
       <span class="link-label">${l.label}</span>
       ${right}
     `;

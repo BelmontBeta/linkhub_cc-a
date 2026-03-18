@@ -19,6 +19,12 @@ const CONFIG = {
       type: "link",
     },
     {
+      label: "Eden AI",
+      url: "https://www.edenai.com.br/home-student",
+      icon: "🤖",
+      type: "link",
+    },
+    {
       label: "Manual do Estudante",
       url: "Manual-do-Estudante-2026.1-CESAR-School.pdf",
       icon: "📖",
@@ -29,7 +35,7 @@ const CONFIG = {
       url: "Calendário Acadêmico 2026.1 Design e CC 231225_v2 (1).pdf",
       icon: "📅",
       type: "pdf",
-    },
+    }
   ],
 
   // ── Disciplinas (com link do Classroom) ──────────────────
@@ -58,7 +64,7 @@ const CONFIG = {
       aulas: [
         { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
         { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
-        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
     {
@@ -66,7 +72,7 @@ const CONFIG = {
       aulas: [
         { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala 05 · Apolo" },
         { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala 05 · Apolo" },
-        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
     {
@@ -74,7 +80,7 @@ const CONFIG = {
       aulas: [
         { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
         { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
-        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
     {
@@ -94,7 +100,8 @@ const CONFIG = {
     { data: "2026-04-14", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
     { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 05 · Apolo" },
     { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Online" },
+    { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Presencial" },
+    { data: "2026-04-24", disciplina: "Projeto 01", tipo: "Status Report 1", horario: "A confirmar", sala: "Presencial" },
   ],
 
   // ── Monitorias ───────────────────────────────────────────
