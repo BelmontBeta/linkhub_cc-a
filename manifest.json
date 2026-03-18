@@ -1,0 +1,18 @@
+{
+  "name": "Linkhub CC-B · CESAR School",
+  "short_name": "Linkhub CC-B",
+  "description": "Hub de informações da turma CC B 2026.1 — CESAR School",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#e35a00",
+  "theme_color": "#e35a00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "school_laranja.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+// ============================================================
+//  CESAR School · Linkhub da Turma — Configuração Central
+//  Edite aqui para atualizar todas as informações do hub
+// ============================================================
+
+const CONFIG = {
+
+  // ── Identidade ──────────────────────────────────────────
+  turma: "CC Turma B",
+  semestre: "2026.1",
+  whatsappLink: "https://chat.whatsapp.com/SEU_LINK_AQUI", // substitua
+
+  // ── Links Institucionais ─────────────────────────────────
+  links: [
+    {
+      label: "Portal do Aluno (Lyceum)",
+      url: "https://cesar.lyceum.com.br/AOnline3/#/home/avisos",
+      icon: "🎓",
+      type: "link",
+    },
+    {
+      label: "Manual do Estudante",
+      url: "Manual-do-Estudante-2026.1-CESAR-School.pdf",
+      icon: "📖",
+      type: "pdf",
+    },
+    {
+      label: "Calendário Acadêmico",
+      url: "Calendário Acadêmico 2026.1 Design e CC 231225_v2 (1).pdf",
+      icon: "📅",
+      type: "pdf",
+    },
+  ],
+
+  // ── Disciplinas (com link do Classroom) ──────────────────
+  disciplinas: [
+    { nome: "Matemática para Computação",  classroom: "https://classroom.google.com/u/2/c/ODQ1OTAxNDE1NjA5" },
+    { nome: "Sistemas Digitais",           classroom: "https://classroom.google.com/u/2/c/ODQzNDg3NDQ1MDky" },
+    { nome: "Introdução à Computação",     classroom: "https://classroom.google.com/u/2/c/ODQ0MDc3NzE3MTg5" },
+    { nome: "Fundamentos de Programação",  classroom: "https://classroom.google.com/u/2/c/ODQzNzczMDYyODc5" },
+    { nome: "FP1: Gestão de Pessoas",      classroom: "https://classroom.google.com/u/2/c/ODQzNzcwODAxODMz" },
+    { nome: "Projeto 01",                  classroom: "https://classroom.google.com/u/2/c/ODQzODcyOTE2OTAw" },
+  ],
+
+
+  // nota: aulas online têm online: true
+  // nota: aulas de Projeto variam por grupo (ter/qua/qui) — indicado com aviso
+  grade: [
+    {
+      dia: "Segunda",
+      aulas: [
+        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala 05 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala 05 · Apolo" },
+      ],
+    },
+    {
+      dia: "Terça",
+      aulas: [
+        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
+        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+      ],
+    },
+    {
+      dia: "Quarta",
+      aulas: [
+        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala 05 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala 05 · Apolo" },
+        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+      ],
+    },
+    {
+      dia: "Quinta",
+      aulas: [
+        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
+        { horario: "13:00 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "Sala 08 · Apolo", aviso: true },
+      ],
+    },
+    {
+      dia: "Sexta",
+      emoji: "🛋️",
+      aulas: [
+        { horario: "08:15 – 10:15", disciplina: "FP1: Gestão de Pessoas", sala: "Online 😴", online: true },
+        { horario: "10:30 – 11:30", disciplina: "FP1: Gestão de Pessoas", sala: "Online 😴", online: true },
+      ],
+    },
+  ],
+
+  // ── Provas ───────────────────────────────────────────────
+  // Datas extraídas da grade semanal (semana de 13–17/mar/2026)
+  provas: [
+    { data: "2026-04-13", disciplina: "Sistemas Digitais", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
+    { data: "2026-04-14", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
+    { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 05 · Apolo" },
+    { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
+    { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Online" },
+  ],
+
+  // ── Monitorias ───────────────────────────────────────────
+  // Para múltiplos horários da mesma disciplina, use entradas separadas
+  monitorias: [
+    { disciplina: "Matemática para Computação", dia: "Segunda", horario: "15:00", sala: "Sala 05 · Apolo", link: "" },
+    { disciplina: "Matemática para Computação", dia: "Sexta", horario: "A combinar", sala: "Online", link: "" },
+    { disciplina: "Sistemas Digitais", dia: "Segunda", horario: "14:00", sala: "Online — horário a combinar", link: "" },
+    { disciplina: "Projeto 01", dia: "—", horario: "A definir", sala: "—", link: "" },
+    { disciplina: "Introdução à Computação", dia: "—", horario: "A definir", sala: "—", link: "" },
+    { disciplina: "Fundamentos de Programação", dia: "Segunda", horario: "13:30", sala: "Sala 04 · Apolo", link: "" },
+    { disciplina: "Fundamentos de Programação", dia: "Terça", horario: "14:30", sala: "Sala 04 · Apolo", link: "" },
+  ],
+
+};
