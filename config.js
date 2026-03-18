@@ -8,7 +8,7 @@ const CONFIG = {
   // ── Identidade ──────────────────────────────────────────
   turma: "CC Turma B",
   semestre: "2026.1",
-  whatsappLink: "https://chat.whatsapp.com/SEU_LINK_AQUI", // substitua
+  whatsappLink: "https://chat.whatsapp.com/DsINbN4jMXgL8Jmdc8P2Un?mode=gi_t",
 
   // ── Links Institucionais ─────────────────────────────────
   links: [
