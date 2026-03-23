@@ -1,7 +1,7 @@
 {
-  "name": "Linkhub CC-B · CESAR School",
-  "short_name": "Linkhub CC-B",
-  "description": "Hub de informações da turma CC B 2026.1 — CESAR School",
+  "name": "Linkhub CC-A · CESAR School",
+  "short_name": "Linkhub CC-A",
+  "description": "Hub de informações da turma CC A 2026.1 — CESAR School",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#e35a00",

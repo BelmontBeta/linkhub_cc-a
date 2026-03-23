@@ -6,9 +6,9 @@
 const CONFIG = {
 
   // ── Identidade ──────────────────────────────────────────
-  turma: "CC Turma B",
+  turma: "CC Turma A",
   semestre: "2026.1",
-  whatsappLink: "https://chat.whatsapp.com/DsINbN4jMXgL8Jmdc8P2Un?mode=gi_t",
+  whatsappLink: "https://chat.whatsapp.com/EmSVqZR6Klq9f6ZYBYkdsj",
 
   // ── Links Institucionais ─────────────────────────────────
   links: [
@@ -22,6 +22,18 @@ const CONFIG = {
       label: "Eden AI",
       url: "https://www.edenai.com.br/home-student",
       icon: "🤖",
+      type: "link",
+    },
+    {
+      label: "Comunidade CESAR School",
+      url: "https://a.cesar.school/ConviteCC",
+      icon: "🏫",
+      type: "link",
+    },
+    {
+      label: "Portal de Carreiras - Workalove",
+      url: "https://workability.worka.love/#/",
+      icon: "🔥",
       type: "link",
     },
     {
@@ -40,12 +52,12 @@ const CONFIG = {
 
   // ── Disciplinas (com link do Classroom) ──────────────────
   disciplinas: [
-    { nome: "Matemática para Computação",  classroom: "https://classroom.google.com/u/2/c/ODQ1OTAxNDE1NjA5" },
-    { nome: "Sistemas Digitais",           classroom: "https://classroom.google.com/u/2/c/ODQzNDg3NDQ1MDky" },
-    { nome: "Introdução à Computação",     classroom: "https://classroom.google.com/u/2/c/ODQ0MDc3NzE3MTg5" },
-    { nome: "Fundamentos de Programação",  classroom: "https://classroom.google.com/u/2/c/ODQzNzczMDYyODc5" },
-    { nome: "FP1: Gestão de Pessoas",      classroom: "https://classroom.google.com/u/2/c/ODQzNzcwODAxODMz" },
-    { nome: "Projeto 01",                  classroom: "https://classroom.google.com/u/2/c/ODQzODcyOTE2OTAw" },
+    { nome: "Matemática para Computação",  classroom: "https://classroom.google.com/u/3/c/ODQ1OTAxNTQ0NzAw" },
+    { nome: "Sistemas Digitais",           classroom: "https://classroom.google.com/u/3/c/ODQzNDg1MDY5MTQ3" },
+    { nome: "Introdução à Computação",     classroom: "https://classroom.google.com/u/3/c/ODQ0MDc1NDI4MzIw" },
+    { nome: "Fundamentos de Programação",  classroom: "https://classroom.google.com/u/3/c/ODQzNzc2MTY1Njky" },
+    { nome: "FP1: Gestão de Pessoas",      classroom: "https://classroom.google.com/u/3/c/ODQzNzcwODAxODMz" },
+    { nome: "Projeto 01",                  classroom: "https://classroom.google.com/u/3/c/ODQzODcyOTE2OTAw" },
   ],
 
 
@@ -55,31 +67,31 @@ const CONFIG = {
     {
       dia: "Segunda",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala 05 · Apolo" },
+        { horario: "08:15 – 10:15", disciplina: "Sistemas Digitais", sala: "Sala 08 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Matemática para Computação", sala: "Sala 08 · Apolo" },
       ],
     },
     {
       dia: "Terça",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
+        { horario: "08:15 – 10:15", disciplina: "Fundamentos de Programação", sala: "Sala 08 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Introdução à Computação", sala: "Sala 08 · Apolo" },
         { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
     {
       dia: "Quarta",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala 05 · Apolo" },
+        { horario: "08:15 – 10:15", disciplina: "Sistemas Digitais", sala: "Sala 08 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Matemática para Computação", sala: "Sala 08 · Apolo" },
         { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
     {
       dia: "Quinta",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
+        { horario: "08:15 – 10:15", disciplina: "Fundamentos de Programação", sala: "Sala 08 · Apolo" },
+        { horario: "10:30 – 12:30", disciplina: "Introdução à Computação", sala: "Sala 08 · Apolo" },
         { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
     },
@@ -96,10 +108,10 @@ const CONFIG = {
   // ── Provas ───────────────────────────────────────────────
   // Datas extraídas da grade semanal (semana de 13–17/mar/2026)
   provas: [
-    { data: "2026-04-13", disciplina: "Sistemas Digitais", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-14", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
+    { data: "2026-04-13", disciplina: "Sistemas Digitais", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
+    { data: "2026-04-14", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
+    { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 08 · Apolo" },
+    { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
     { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Presencial" },
     { data: "2026-04-24", disciplina: "Projeto 01", tipo: "Status Report 1", horario: "A confirmar", sala: "Presencial" },
   ],
@@ -108,7 +120,7 @@ const CONFIG = {
   // Para múltiplos horários da mesma disciplina, use entradas separadas
   monitorias: [
     { disciplina: "Matemática para Computação", dia: "Segunda", horario: "15:00", sala: "Sala 05 · Apolo", link: "" },
-    { disciplina: "Matemática para Computação", dia: "Sexta", horario: "A combinar", sala: "Online", link: "" },
+    { disciplina: "Matemática para Computação", dia: "Sexta", horario: "15:00", sala: "Online", link: "" },
     { disciplina: "Sistemas Digitais", dia: "Segunda", horario: "14:00", sala: "Online — horário a combinar", link: "" },
     { disciplina: "Projeto 01", dia: "—", horario: "A definir", sala: "—", link: "" },
     { disciplina: "Introdução à Computação", dia: "—", horario: "A definir", sala: "—", link: "" },
