@@ -109,7 +109,7 @@ const CONFIG = {
   // Datas extraídas da grade semanal (semana de 13–17/mar/2026)
   provas: [
     { data: "2026-04-13", disciplina: "Sistemas Digitais", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
-    { data: "2026-04-14", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
+    { data: "2026-04-16", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
     { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 08 · Apolo" },
     { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
     { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Presencial" },
