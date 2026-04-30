@@ -1,5 +1,5 @@
 /* ================================================================
-   LINKHUB CC-B · CESAR School — JavaScript Principal
+   LINKHUB CC-A · CESAR School — JavaScript Principal
    Arquivo: script.js
 
    O que é JavaScript?
@@ -25,7 +25,7 @@
    init() lê os dados do CONFIG e cria os elementos HTML
    dinamicamente. Em vez de escrever cada card no HTML, o JS
    os gera a partir dos dados do config.js.
-   
+
    Por que fazer assim?
    Porque assim para atualizar o conteúdo do site, basta editar
    o config.js — sem precisar mexer no HTML.
@@ -52,7 +52,7 @@ function init() {
   /* ── Links Importantes ───────────────────────────────────
      Para cada link definido em CONFIG.links, criamos um elemento
      <a> (link HTML) e o adicionamos ao grid de links.
-     
+
      forEach() percorre cada item de um array.
      l = cada objeto de link ({ label, url, icon, type })
   ────────────────────────────────────────────────────────── */
@@ -171,7 +171,7 @@ function init() {
 
   /* ── Calendário de Provas ─────────────────────────────────
      As provas são agrupadas por disciplina.
-     
+
      Passo 1: Ordenar as provas por data (mais próximas primeiro)
      Passo 2: Agrupar por disciplina em um objeto
      Passo 3: Para cada disciplina, criar um grupo com header + cards
@@ -385,7 +385,7 @@ function closeQR(e) {
 /* ── Download do QR Code ─────────────────────────────────────
    async/await é a forma moderna de lidar com operações assíncronas
    (que levam tempo, como buscar dados da internet).
-   
+
    fetch() faz uma requisição HTTP para buscar a imagem do QR Code.
    blob() converte a resposta em um objeto de arquivo binário.
    URL.createObjectURL() cria uma URL temporária para o arquivo.
@@ -466,7 +466,7 @@ document.querySelector(".logo-wrap").addEventListener("click", () => location.re
    5. MODO ESCURO / CLARO
    O tema é salvo no localStorage — um armazenamento persistente
    no navegador do usuário que mantém os dados entre sessões.
-   
+
    Lógica de prioridade:
    1. Se o usuário já escolheu um tema (salvo no localStorage) → usa ele
    2. Se não → respeita a preferência do sistema operacional
@@ -511,14 +511,19 @@ toggle.addEventListener("click", () => {
 ================================================================ */
 function initCountdown() {
   const banner = document.getElementById("countdown-banner");
-  const now = new Date(); now.setHours(0,0,0,0);
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // Zera a hora para comparar apenas as datas
 
   // Transforma cada prova em objeto com campo "date" já calculado
   // filter() mantém só os itens que satisfazem a condição
   // sort() ordena por data crescente
   const upcoming = CONFIG.provas
-    .map(p => ({ ...p, date: new Date(p.data + "T12:00:00") }))
-    .filter(p => p.date >= now)
+    .map(p => {
+      const provaDate = new Date(p.data + "T12:00:00"); // Usa T12:00:00 para evitar fuso horário
+      provaDate.setHours(0, 0, 0, 0); // Zera a hora da prova também para comparação de dias
+      return { ...p, date: provaDate };
+    })
+    .filter(p => p.date >= now) // Mantém apenas provas futuras ou no dia atual
     .sort((a, b) => a.date - b.date);
 
   // Se não há provas futuras, esconde o banner
@@ -529,9 +534,14 @@ function initCountdown() {
 
   const next = upcoming[0]; // próxima prova (primeira do array ordenado)
 
-  // Calcula diferença em dias: converte milissegundos para dias
-  // Math.round arredonda para o inteiro mais próximo
-  const diff = Math.round((next.date - now) / (1000 * 60 * 60 * 24));
+  // Calcula diferença em dias:
+  // 1. Diferença em milissegundos
+  // 2. Converte para dias
+  // 3. Math.ceil() arredonda para cima.
+  //    Se a prova é hoje, a diferença é 0, Math.ceil(0) = 0.
+  //    Se a prova é amanhã, a diferença é > 0 e <= 1, Math.ceil(0.x) = 1.
+  const diffMs = next.date.getTime() - now.getTime();
+  const diff = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
   // Emoji muda conforme a urgência
   const emoji = diff === 0 ? "🚨"        // é hoje!
@@ -564,7 +574,7 @@ function initCountdown() {
    Verifica se o navegador suporta Service Workers e registra o sw.js.
    O "in" verifica se uma propriedade existe em um objeto.
    O .catch(() => {}) silencia erros (ex: em localhost sem HTTPS).
-   
+
    Por que verificar suporte?
    Navegadores mais antigos não têm essa API. A verificação evita
    que o código quebre nesses casos.
