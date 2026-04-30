@@ -67,8 +67,8 @@ const CONFIG = {
     {
       dia: "Segunda",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Sistemas Digitais", sala: "Sala 08 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Matemática para Computação", sala: "Sala 08 · Apolo" },
+        { horario: "08:15 – 10:15", disciplina: "Sistemas Digitais", sala: "Garagem 01 · Tiradentes" },
+        { horario: "10:30 – 12:30", disciplina: "Matemática para Computação", sala: "Laboratorio 02 · Tiradentes" },
       ],
     },
     {
