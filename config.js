@@ -115,7 +115,7 @@ const CONFIG = {
     { data: "2026-06-16", disciplina: "Fundamentos de Programação", tipo: "Módulo 2 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
     { data: "2026-06-17", disciplina: "Matemática para Computação", tipo: "AV2 · 1ª Unidade", horario: "08:15", sala: "Sala 08 · Apolo" },
     { data: "2026-06-12", disciplina: "FP1: Gestão de Pessoas", tipo: "AV2 · 1ª Unidade", horario: "08:15", sala: "Presencial" },
-    { data: "2026-04-24", disciplina: "Projeto 01", tipo: "Status Report 1", horario: "A confirmar", sala: "Presencial" },
+    { data: "2026-05-19", disciplina: "Projeto 01", tipo: "Status Report 2", horario: "A confirmar", sala: "Presencial" },
   ],
 
   // ── Monitorias ───────────────────────────────────────────
